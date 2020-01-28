@@ -15,10 +15,10 @@ from . import config
 links = []
 list = []
 
-with open(config['list'], 'r') as f:
-    list = f.readlines()
+with open(config['list'], 'r') as f:   # часто-задаваемые вопросы
+    list = f.readlines() 
 
-with open(config['links'], 'r') as f:
+with open(config['links'], 'r') as f:  # ответы на вопросы в виде ссылки 
     links = f.readlines()
 
 
@@ -137,8 +137,11 @@ def step_four(update: Updater, context: CallbackContext):
                           '\nПо окончанию работы программы автоподписок нажмите на /shag_5 на вашей клавиатуре. ',
                      reply_markup=reply_markup)
 
-
+                     
+# inline-режим для вызова бота с любого диалога
 def inlinequery(update, context):
+    # Считывает сообщение пользователя и ищет совпадения в часто-задаваемых вопросах, по номеру вопроса
+    # возвращает ссылку на статью с ответом 
     query = update.inline_query.query
     number = []
     a = [number.append(i) for i in range(len(list)) if query in list[i]]
@@ -170,14 +173,14 @@ def inlinequery(update, context):
 def main(dispatcher, updater):
     # старт
 
-    dispatcher.add_handler(CommandHandler('start', start))
-    dispatcher.add_handler(CommandHandler('shag_2', step_two))
+    dispatcher.add_handler(CommandHandler('start', start))      # функция старта 
+    dispatcher.add_handler(CommandHandler('shag_2', step_two))  # функции, вызываемые с помощбю кнопок на клавиатуре
     dispatcher.add_handler(CommandHandler('shag_5', last_step))
     dispatcher.add_handler(CommandHandler('go', go))
     dispatcher.add_handler(CommandHandler('end', end))
     dispatcher.add_handler(CommandHandler('shag_3', step_three))
     dispatcher.add_handler(CommandHandler('shag_4', step_four))
-    dispatcher.add_handler(InlineQueryHandler(inlinequery))
+    dispatcher.add_handler(InlineQueryHandler(inlinequery))    # inline-режим бота
 
 
 if __name__ == '__main__':
