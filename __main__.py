@@ -71,14 +71,7 @@ def last_step(update: Updater, context: CallbackContext):
                                                           + code[number_of_code] + ''
                                                                                    '\nНапишите одному из топов, '
                                                                                    'чтобы они добавили вас в группу:'
-                                                                                   '\n@Scar01 🌪\n'
-                                                                                   '@MoonSeoyeong 🌸\n'
-                                                                                   '@LudmiZav1208 🐍\n'
-                                                                                   '@FilippM 👔\n'
-                                                                                   '@gavri_love 💼\n'
-                                                                                   '@SborBaz 👨‍🔧\n'
-                                                                                   '@southno 🌝\n'
-                                                                                   '@IrinaBochkarewa 🦐')
+                                                                                   ')
 
 
 def go(update: Updater, context: CallbackContext):
@@ -115,7 +108,7 @@ def step_three(update: Updater, context: CallbackContext):
                           ' подписываться'
                           ' аудитория, которая будет читать Ваши статьи.\n'
                           '\nСейчас Вам нужно внести Ваши данные в базу '
-                          '\nhttps://docs.google.com/forms/d/1mhmrVmOehGILptTxgmCoLGmr8AL2h4MG7l9AHZIwbKs/edit\n'
+                          '\nhttps://docs.google.com/forms/d/1*****VmOehGILptTxgmCoLGmr8AL2h4MG7l9AHZIwbKs/edit\n'
                           '\n'
                           'Где найти ссылку на свой профиль:'
                           ' https://telegra.ph/Kak-skopirovat-ssylku-na-svoj-kanal-08-24-2\n'
@@ -136,10 +129,10 @@ def step_four(update: Updater, context: CallbackContext):
                           'ссылке:\n '
                           '\n'
                           '\nи скачать программу для автоподписок.'
-                          '\nhttps://drive.google.com/file/d/1S3plvutcI8zvrRjDEtUR-uRfl-LA-bXs/view?usp=sharing\n'
+                          '\nhttps://drive.google.com/*****/1S3plvutcI8zvrRjDEtUR-uRfl-LA-bXs/view?usp=sharing\n'
                           '\nСсылка на инструкцию по использованию программы: https://youtu.be/zm5HRHIDEQQ\n '
                           '\nВсе существующие каналы можно получить по ссылке:'
-                          '\nhttps://docs.google.com/spreadsheets/d/1omqlCribj-Qgb3Pd89gsaovnXHUCKY-fiRUiLJBTf0Y/'
+                          '\nhttps://docs.google.com/*******s/d/1omqlCribj-Qgb3Pd89gsaovnXHUCKY-fiRUiLJBTf0Y/'
                           'edit#gid=289759398\n'
                           '\nПо окончанию работы программы автоподписок нажмите на /shag_5 на вашей клавиатуре. ',
                      reply_markup=reply_markup)
